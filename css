@@ -212,3 +212,91 @@ button {
     color: red;
     border-color: red;
 }
+
+/* --- 2단계 추가: 캘린더 스타일 --- */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin: 0 10px 20px 10px;
+    flex: 1;
+}
+
+.cal-header-day {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+
+.cal-day {
+    background-color: #fff;
+    border: 1px solid #000;
+    aspect-ratio: 1 / 1; /* 정사각형 비율 유지 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.cal-day.today {
+    border: 3px solid #000; /* 오늘 날짜 두꺼운 테두리 */
+    font-weight: bold;
+}
+
+.grade-display {
+    margin-top: auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+/* --- 2단계 추가: 순공 시간 입력 모달 --- */
+/* 전체 화면의 40%를 차지하는 창 넓이 설정 */
+.study-modal-box {
+    width: 40%;
+    min-width: 160px; /* 모바일에서 글자가 깨지지 않도록 최소 너비 보장 */
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.study-modal-box h3 {
+    font-size: 0.9rem;
+    word-break: keep-all;
+}
+
+.time-input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.time-input-group input {
+    width: 40px;
+    text-align: right;
+    border: 1px solid #000;
+    padding: 3px;
+    font-size: 1rem;
+}
+
+/* Chrome, Safari, Edge, Opera에서 input type="number"의 화살표 제거 */
+.time-input-group input::-webkit-outer-spin-button,
+.time-input-group input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.error-text {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: -5px;
+}
