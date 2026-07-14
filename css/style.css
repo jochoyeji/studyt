@@ -168,7 +168,6 @@ button {
     gap: 15px;
     margin-top: 30px;
 }
-... 기존 정상 코드들 ...
 
 /* --- [3단계 수정] 메뉴 버튼 네모 박스 스타일 --- */
 .menu-button-group {
